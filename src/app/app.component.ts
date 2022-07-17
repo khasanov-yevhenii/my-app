@@ -43,6 +43,8 @@ export class AppComponent implements OnInit {
   public testNum = 7;
   public name = '';
   public users = USERS;
+  public color = '';
+  public condition = false;
 
   ngOnInit(): void {
     setTimeout(() => {
