@@ -8,6 +8,7 @@ import {FactorialPipe} from './pipes/factorial.pipe';
 import {IsAdminFilterPipe} from './pipes/is-admin-filter.pipe';
 import {HighlightDirective} from './directives/highlight.directive';
 import {IfNotDirective} from './directives/if-not.directive';
+import { ModalDirective } from './directives/modal.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {IfNotDirective} from './directives/if-not.directive';
     IsAdminFilterPipe,
     HighlightDirective,
     IfNotDirective,
+    ModalDirective,
   ],
   imports: [
     BrowserModule,

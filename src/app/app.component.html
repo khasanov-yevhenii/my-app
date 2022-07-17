@@ -33,14 +33,16 @@
 
 <p>
   The condition is currently
-  <span [ngClass]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
+  <span [class]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
   <button
     type="button"
     (click)="condition = !condition"
-    [ngClass] = "{ 'a': condition, 'b': !condition }" >
+    [class]="{ 'a': condition, 'b': !condition }">
     Toggle condition to {{condition ? 'false' : 'true'}}
   </button>
 </p>
+
+<div class="notification" appModal>notification №1</div>
 
 <p *appIfNot="condition" class="unless a">
   (A) This paragraph is displayed because the condition is false.
