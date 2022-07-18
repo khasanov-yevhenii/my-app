@@ -8,7 +8,10 @@ import {FactorialPipe} from './pipes/factorial.pipe';
 import {IsAdminFilterPipe} from './pipes/is-admin-filter.pipe';
 import {HighlightDirective} from './directives/highlight.directive';
 import {IfNotDirective} from './directives/if-not.directive';
-import { ModalDirective } from './directives/modal.directive';
+import {ModalDirective} from './directives/modal.directive';
+import {PostsComponent} from './components/posts/posts.component';
+import {CategoryComponent} from './components/category/category.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,9 @@ import { ModalDirective } from './directives/modal.directive';
     HighlightDirective,
     IfNotDirective,
     ModalDirective,
+    PostsComponent,
+    CategoryComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,
