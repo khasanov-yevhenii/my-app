@@ -1,4 +1,5 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
+import {NavigationCancel, Router} from '@angular/router';
 
 const USERS = [
   {
@@ -46,17 +47,15 @@ export class AppComponent implements OnInit {
   public color = '';
   public condition = false;
 
+  constructor(private router: Router) {
+  }
+
   ngOnInit(): void {
-    setTimeout(() => {
-      // this.users.push({
-      //   name: 'Ann',
-      //   isAdmin: true,
-      // });
-      // this.users = [...this.users, {
-      //   name: 'Ann',
-      //   isAdmin: true,
-      // }];
-    }, 1000);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationCancel) {
+        console.log('redirect canceled');
+      }
+    })
   }
 
   log(): void {
