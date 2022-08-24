@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
 .notification {
   position: fixed;
   top: 10px;
@@ -11,4 +19,10 @@
   text-transform: uppercase;
   color: #FFF;
   z-index: 999;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

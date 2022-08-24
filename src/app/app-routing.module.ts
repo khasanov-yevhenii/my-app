@@ -7,8 +7,14 @@ import {StatisticsComponent} from './components/statistics/statistics.component'
 import {AuthGuard} from './guards/auth.guard';
 import {FeedbackGuard} from './guards/feedback.guard';
 import {StatisticsResolver} from './guards/statistics.resolver';
+import {ParentComponent} from './components/parent/parent.component';
 
 const routes: Routes = [
+  {
+    title: 'Parent',
+    path: 'parent',
+    component: ParentComponent,
+  },
   {
     title: 'Posts',
     path: 'posts',

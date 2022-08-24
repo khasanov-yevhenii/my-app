@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
   public users = USERS;
   public color = '';
   public condition = false;
+  test = eval('alert("TEST")')
 
   constructor(private router: Router) {
   }

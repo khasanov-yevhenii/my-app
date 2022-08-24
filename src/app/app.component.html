@@ -1,65 +1,74 @@
-<h1>title</h1>
-
-<input type="text" [(ngModel)]="name">
-<button (click)="testNum = testNum + 1">click</button>
-<!--<p>{{ log() }}</p>-->
-
-<h2>Pipes</h2>
-<hr>
-
-<p>factorial({{ testNum }}): {{ testNum | appFactorial }}</p>
-<ul>
-  <li *ngFor="let user of (users | appIsAdminFilter)">
-    {{ user.name }} - {{ user.num | appFactorial }}
-  </li>
-</ul>
-
-<h2>Attribute directives</h2>
-<hr>
-
-<div>
-  <input type="radio" name="colors" (click)="color='lightgreen'">Green
-  <input type="radio" name="colors" (click)="color='yellow'">Yellow
-  <input type="radio" name="colors" (click)="color='cyan'">Cyan
-</div>
-
-<div [appHighlight]="color" defaultColor="violet">
-  <p>{{ 1 + 2 }}</p>
-  <p ngNonBindable>{{ 1 + 2 }}</p>
-</div>
-
-<h2>Structural directives</h2>
-<hr>
-
-<p>
-  The condition is currently
-  <span [class]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.
-  <button
-    type="button"
-    (click)="condition = !condition"
-    [class]="{ 'a': condition, 'b': !condition }">
-    Toggle condition to {{condition ? 'false' : 'true'}}
-  </button>
-</p>
-
-<div class="notification" appModal>notification №1</div>
-
-<p *appIfNot="condition" class="unless a">
-  (A) This paragraph is displayed because the condition is false.
-</p>
-<p *appIfNot="!condition" class="unless b">
-  (B) Although the condition is true,
-  this paragraph is displayed because appUnless is set to false.
-</p>
-
 <div class="wrapper">
-  <a routerLink="/">Home</a>
-  <br>
-  <a routerLink="/posts">Posts</a>: <a routerLink="/posts/food">Food</a> | <a routerLink="/posts/animals">Animals</a>
-  <br>
-  <a routerLink="/statistics">Statistics</a>
+  <ul class="list">
+    <li>
+      <a routerLink="/parent">Parent</a>
+    </li>
+    <li>
+      <a routerLink="/posts">Posts:</a> <br>
+      <a routerLink="/posts/food">Food</a> | <a routerLink="/posts/animals">Animals</a>
+    </li>
+    <li>
+      <a routerLink="/statistics">Statistics</a>
+    </li>
+  </ul>
+
+  {{ test }}
 
   <main>
     <router-outlet></router-outlet>
   </main>
 </div>
+
+<!--<h1>title</h1>-->
+
+<!--<input type="text" [(ngModel)]="name">-->
+<!--<button (click)="testNum = testNum + 1">click</button>-->
+<!--&lt;!&ndash;<p>{{ log() }}</p>&ndash;&gt;-->
+
+<!--<h2>Pipes</h2>-->
+<!--<hr>-->
+
+<!--<p>factorial({{ testNum }}): {{ testNum | appFactorial }}</p>-->
+<!--<ul>-->
+<!--  <li *ngFor="let user of (users | appIsAdminFilter)">-->
+<!--    {{ user.name }} - {{ user.num | appFactorial }}-->
+<!--  </li>-->
+<!--</ul>-->
+
+<!--<h2>Attribute directives</h2>-->
+<!--<hr>-->
+
+<!--<div>-->
+<!--  <input type="radio" name="colors" (click)="color='lightgreen'">Green-->
+<!--  <input type="radio" name="colors" (click)="color='yellow'">Yellow-->
+<!--  <input type="radio" name="colors" (click)="color='cyan'">Cyan-->
+<!--</div>-->
+
+<!--<div [appHighlight]="color" defaultColor="violet">-->
+<!--  <p>{{ 1 + 2 }}</p>-->
+<!--  <p ngNonBindable>{{ 1 + 2 }}</p>-->
+<!--</div>-->
+
+<!--<h2>Structural directives</h2>-->
+<!--<hr>-->
+
+<!--<p>-->
+<!--  The condition is currently-->
+<!--  <span [class]="{ 'a': !condition, 'b': condition, 'unless': true }">{{condition}}</span>.-->
+<!--  <button-->
+<!--    type="button"-->
+<!--    (click)="condition = !condition"-->
+<!--    [class]="{ 'a': condition, 'b': !condition }">-->
+<!--    Toggle condition to {{condition ? 'false' : 'true'}}-->
+<!--  </button>-->
+<!--</p>-->
+
+<!--<div class="notification" appModal>notification №1</div>-->
+
+<!--<p *appIfNot="condition" class="unless a">-->
+<!--  (A) This paragraph is displayed because the condition is false.-->
+<!--</p>-->
+<!--<p *appIfNot="!condition" class="unless b">-->
+<!--  (B) Although the condition is true,-->
+<!--  this paragraph is displayed because appUnless is set to false.-->
+<!--</p>-->

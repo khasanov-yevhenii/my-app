@@ -11,7 +11,9 @@ import {IfNotDirective} from './directives/if-not.directive';
 import {ModalDirective} from './directives/modal.directive';
 import {PostsComponent} from './components/posts/posts.component';
 import {CategoryComponent} from './components/category/category.component';
-import { StatisticsComponent } from './components/statistics/statistics.component';
+import {StatisticsComponent} from './components/statistics/statistics.component';
+import {ParentComponent} from './components/parent/parent.component';
+import {ChildComponent} from './components/parent/child/child.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
     PostsComponent,
     CategoryComponent,
     StatisticsComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
