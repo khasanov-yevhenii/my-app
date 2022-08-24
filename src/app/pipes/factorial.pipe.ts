@@ -1,6 +1,6 @@
-import {Pipe, PipeTransform} from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
-import {factorial, memoizeFactorial} from '../utils/factorial';
+import { factorial, memoizeFactorial } from '../utils/factorial';
 
 @Pipe({
   name: 'appFactorial',

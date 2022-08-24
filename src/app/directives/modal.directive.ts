@@ -1,15 +1,14 @@
-import {Directive, ElementRef, HostListener} from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 // BETA :D
 
 @Directive({
-  selector: '[appModal]'
+  selector: '[appModal]',
 })
 export class ModalDirective {
   private start = false;
 
-  constructor(private el: ElementRef) {
-  }
+  constructor(private el: ElementRef) {}
 
   @HostListener('click', ['$event']) onMouseClick() {
     this.start = !this.start;

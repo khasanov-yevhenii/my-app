@@ -14,9 +14,19 @@ import {
 @Component({
   selector: 'app-child',
   templateUrl: './child.component.html',
-  styleUrls: ['./child.component.scss']
+  styleUrls: ['./child.component.scss'],
 })
-export class ChildComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class ChildComponent
+  implements
+    OnChanges,
+    OnInit,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
+{
   constructor() {
     console.log(' - ChildComponent.constructor');
   }
@@ -32,7 +42,6 @@ export class ChildComponent implements OnChanges, OnInit, DoCheck, AfterContentI
   ngDoCheck() {
     console.log(' - ChildComponent.ngDoCheck');
   }
-
 
   ngAfterContentInit() {
     console.log(' - ChildComponent.ngAfterContentInit');

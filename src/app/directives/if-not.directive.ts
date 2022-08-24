@@ -1,7 +1,7 @@
-import {Directive, Input, TemplateRef, ViewContainerRef} from '@angular/core';
+import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 
 @Directive({
-  selector: '[appIfNot]'
+  selector: '[appIfNot]',
 })
 export class IfNotDirective {
   private hasView = false;
@@ -18,6 +18,5 @@ export class IfNotDirective {
   constructor(
     private templateRef: TemplateRef<any>,
     private viewContainer: ViewContainerRef
-  ) {
-  }
+  ) {}
 }

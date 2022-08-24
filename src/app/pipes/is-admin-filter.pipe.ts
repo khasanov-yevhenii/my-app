@@ -1,10 +1,10 @@
-import {Pipe, PipeTransform} from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'appIsAdminFilter',
 })
 export class IsAdminFilterPipe implements PipeTransform {
   transform(users: any[]): any[] {
-    return users.filter((user) => user.isAdmin);
+    return users.filter(user => user.isAdmin);
   }
 }
